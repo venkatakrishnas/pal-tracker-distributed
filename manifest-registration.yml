@@ -5,6 +5,6 @@ applications:
   memory: 256M
   routes:
   - route: registration-pal-krifar.cfapps.io
-  path: Applications/RegistrationServer/bin/Release/netcoreapp2.2/publish
+  path: Applications/RegistrationServer/bin/Release/netcoreapp2.1/publish
   services:
   - tracker-registration-database
