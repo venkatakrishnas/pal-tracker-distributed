@@ -26,10 +26,11 @@ namespace TimesheetsServer
         {
             // Add framework services.
             services.AddMvc();
-
+            
+            services.AddDiscoveryClient(Configuration);
             services.AddDbContext<TimeEntryContext>(options => options.UseMySql(Configuration));
             services.AddScoped<ITimeEntryDataGateway, TimeEntryDataGateway>();
-            services.AddDiscoveryClient(Configuration);
+            
             
             services.AddSingleton<IProjectClient>(sp =>
             {
