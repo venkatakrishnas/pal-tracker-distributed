@@ -4,9 +4,11 @@ applications:
   instances: 1
   memory: 256M
   routes:
-  - route: backlog-pal-INITIALS.apps.pikes.pal.pivotal.io
+  - route: backlog-pal-krifar.cfapps.io
   path: Applications/BacklogServer/bin/Release/netcoreapp2.1/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN/
+
   services:
   - tracker-backlog-database
+  - tracker-service-registry
+  - tracker-circuit-breaker-dashboard
+  - tracker-amqp
